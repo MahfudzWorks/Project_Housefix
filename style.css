@@ -1,0 +1,26 @@
+.bg-primary-900 {
+    background-color: #0d1b3d;
+}
+
+.bg-primary-200 {
+    background-color: #ebf1ff;
+}
+
+.text-primary-900 {
+    color: #0d1b3d;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important;
+}
+
+.hero {
+    height: 100vh;
+    background: url('img/Body.svg') center/cover no-repeat;
+}
+
+.services .service-item {
+     width: calc(33.333% - 2rem); 
+    background: #e7f1ff;
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.35);
+}
