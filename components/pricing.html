@@ -1,62 +1,171 @@
-<section class="price py-5 bg-light">
+<section class="price py-4 py-md-5 bg-light">
     <div class="container">
-        <div class="text-center mb-5">
-            <a class="nav-link text-primary fw-bold mb-2" href="#">Pricing Plans</a>
-            <h1 class="fw-bold mb-4">Affordable Pricing Plans</h1>
-            <div class="d-flex justify-content-center align-items-center gap-3">
+
+        <div class="text-center mb-4 mb-md-5">
+            <a class="nav-link text-primary fw-bold mb-2" href="#">
+                Pricing Plans
+            </a>
+
+            <h1 class="fw-bold mb-3 mb-md-4 fs-3 fs-md-1">
+                Affordable Pricing Plans
+            </h1>
+
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 gap-md-3">
                 <span class="fw-bold">Monthly</span>
-                <div class="toggleBtn"><div class="toggleCircle"></div></div>
+
+                <div class="toggleBtn" style="width: 50px; height: 26px; background: #ddd; border-radius: 15px; position: relative; cursor: pointer;">
+                    <div class="toggleCircle" style="width: 22px; height: 22px; background: #0d6efd; border-radius: 50%; position: absolute; top: 2px; left: 2px; transition: 0.3s;"></div>
+                </div>
+
                 <span class="fw-bold">Annual</span>
             </div>
         </div>
-        <div class="d-flex justify-content-center gap-4 flex-wrap">
-            <div class="priceCard bg-white p-5 rounded-4 shadow">
-                <h2 class="fw-bold mb-4">Residential Plumbing</h2>
-                <div class="mb-4">
-                    <h1 class="fw-bold text-primary">$199 <span class="fs-5 text-secondary">/Month</span></h1>
+
+        <div class="row g-3 g-md-4 justify-content-center">
+
+            <!-- Card 1 -->
+            <div class="col-12 col-sm-8 col-md-6 col-xl-4">
+                <div class="priceCard bg-white p-4 p-md-5 rounded-4 shadow h-100">
+                    <h2 class="fw-bold mb-3 mb-md-4 fs-4 fs-md-3">Residential Plumbing</h2>
+
+                    <div class="mb-3 mb-md-4">
+                        <h1 class="fw-bold text-primary fs-2 fs-md-1">
+                            $199
+                            <span class="fs-6 text-secondary">/Month</span>
+                        </h1>
+                    </div>
+
+                    <div class="d-flex flex-column gap-2 gap-md-3 mb-3 mb-md-4">
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Free Diagnostics & Consultation</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Plumbing Repairs</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Emergency Plumbing</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Sewer & Drain Cleaning</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Trenchless Sewer Replacement</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Heater Installation & Replacement Repair</p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary w-100 py-2">Get Started</button>
                 </div>
-                <div class="d-flex flex-column gap-3 mb-4">
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Free Diagnostics & Consultation</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Plumbing Repairs</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Emergency Plumbing</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Sewer & Drain Cleaning</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Trenchless Sewer Replacement</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Heater Installation & Replacement Repair</p></div>
-                </div>
-                <button class="btn btn-primary px-4 py-2">Get Started</button>
             </div>
 
-            <div class="priceCard bg-white p-5 rounded-4 shadow">
-                <h2 class="fw-bold mb-4">Commercial Plumbing</h2>
-                <div class="mb-4">
-                    <h1 class="fw-bold text-primary">$499 <span class="fs-5 text-secondary">/Month</span></h1>
+            <!-- Card 2 -->
+            <div class="col-12 col-sm-8 col-md-6 col-xl-4">
+                <div class="priceCard bg-white p-4 p-md-5 rounded-4 shadow h-100">
+                    <h2 class="fw-bold mb-3 mb-md-4 fs-4 fs-md-3">Commercial Plumbing</h2>
+
+                    <div class="mb-3 mb-md-4">
+                        <h1 class="fw-bold text-primary fs-2 fs-md-1">
+                            $499
+                            <span class="fs-6 text-secondary">/Month</span>
+                        </h1>
+                    </div>
+
+                    <div class="d-flex flex-column gap-2 gap-md-3 mb-3 mb-md-4">
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Installations, Repairs, And Replacements</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Leak Detection And Repair</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Water & Gas Piping</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Drain Cleaning & Sewer Service</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Plumbing Inspections & Maintenance</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Heater Installation & Replacement, Repair</p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary w-100 py-2">Get Started</button>
                 </div>
-                <div class="d-flex flex-column gap-3 mb-4">
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Installations, Repairs, And Replacements</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Leak Detection And Repair</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Water & Gas Piping</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Drain Cleaning & Sewer Service</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Plumbing Inspections & Maintenance</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Heater Installation & Replacement, Repair</p></div>
-                </div>
-                <button class="btn btn-primary px-4 py-2">Get Started</button>
             </div>
 
-            <div class="priceCard bg-white p-5 rounded-4 shadow">
-                <h2 class="fw-bold mb-4">Service & Repair</h2>
-                <div class="mb-4">
-                    <h1 class="fw-bold text-primary">$399 <span class="fs-5 text-secondary">/Month</span></h1>
+            <!-- Card 3 -->
+            <div class="col-12 col-sm-8 col-md-6 col-xl-4">
+                <div class="priceCard bg-white p-4 p-md-5 rounded-4 shadow h-100">
+                    <h2 class="fw-bold mb-3 mb-md-4 fs-4 fs-md-3">Service & Repair</h2>
+
+                    <div class="mb-3 mb-md-4">
+                        <h1 class="fw-bold text-primary fs-2 fs-md-1">
+                            $399
+                            <span class="fs-6 text-secondary">/Month</span>
+                        </h1>
+                    </div>
+
+                    <div class="d-flex flex-column gap-2 gap-md-3 mb-3 mb-md-4">
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Replace Spare Parts</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Maintenance Services</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Water Heater Repair Services</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Free Diagnostics & Consultation</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Toilet Repair, Sewer Repair & Leak Repair</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 gap-md-3">
+                            <img src="img/Check.svg" class="checkIcon" alt="" style="width: 20px; height: 20px;">
+                            <p class="m-0 small-md">Heater Installation & Replacement, Repair</p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary w-100 py-2">Get Started</button>
                 </div>
-                <div class="d-flex flex-column gap-3 mb-4">
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Replace Spare Parts</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Maintenance Services</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Water Heater Repair Services</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Free Diagnostics & Consultation</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Toilet Repair, Sewer Repair & Leak Repair</p></div>
-                    <div class="d-flex align-items-center gap-3"><img src="img/Check.svg" alt="" class="checkIcon"><p class="m-0">Heater Installation & Replacement, Repair</p></div>
-                </div>
-                <button class="btn btn-primary px-4 py-2">Get Started</button>
             </div>
+
         </div>
+
     </div>
 </section>
+
+<!-- Tambahkan CSS ini agar lebih rapi di HP -->
+<style>
+@media (max-width: 767px) {
+    .small-md {
+        font-size: 0.9rem;
+    }
+    .priceCard {
+        margin: 0 auto;
+        max-width: 450px;
+    }
+}
+</style>

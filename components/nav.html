@@ -1,28 +1,47 @@
-<nav>
-    <div class="d-flex p-3 px-5 justify-content-between align-items-center">
-        <div class="logo">
-            <img src="img/Logo.svg" alt="Logo HouseFix" />
-        </div>
-        <div class="d-flex gap-5 align-items-center">
-            <ul class="d-flex gap-3 mb-0 list-unstyled">
-                <li><a class="nav-link text-primary-900 text-decoration-none" href="home">Home</a></li>
-                <li class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Blog</a>
-                    <ul class="dropdown-menu">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm w-100">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="img/Logo.svg" alt="Logo" height="45">
+        </a>
+
+        <button 
+            class="navbar-toggler border-0" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarMenu">
+            <ul class="navbar-nav mx-auto gap-lg-4 text-center text-lg-start">
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-medium" href="#" data-bs-toggle="dropdown">Blog</a>
+                    <ul class="dropdown-menu text-center text-lg-start">
                         <li><a class="dropdown-item" href="#">Artikel</a></li>
                         <li><a class="dropdown-item" href="#">Berita</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a class="nav-link text-primary-900 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
-                    <ul class="dropdown-menu">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-medium" href="#" data-bs-toggle="dropdown">Pages</a>
+                    <ul class="dropdown-menu text-center text-lg-start">
                         <li><a class="dropdown-item" href="#">Artikel</a></li>
                         <li><a class="dropdown-item" href="#">Berita</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link text-primary-900 text-decoration-none" href="contactus">Contact Us</a></li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium" href="#">Contact Us</a>
+                </li>
             </ul>
-            <div class="btn btn-primary">Schedule a Call</div>
+            <div class="text-center text-lg-start mt-3 mt-lg-0">
+                <a href="#" class="btn btn-primary w-100 w-lg-auto">Schedule a Call</a>
+            </div>
         </div>
     </div>
 </nav>
