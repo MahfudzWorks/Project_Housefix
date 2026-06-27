@@ -81,3 +81,45 @@
     </div>
 
 </section>
+
+<script>
+function initStats() {
+  const statSection = document.querySelector('.stats');
+  const statElements = document.querySelectorAll('.stat-card h3');
+  let animated = false;
+
+  const targets = [1200, 8714, 1600, 500];
+
+  function animateNumber(el, finalValue) {
+    let current = 0;
+    const duration = 2000;
+    const interval = 20;
+    const steps = duration / interval;
+    const increment = finalValue / steps;
+
+    const counter = setInterval(() => {
+      current += increment;
+      if (current >= finalValue) {
+        el.textContent = finalValue.toLocaleString() + '+';
+        clearInterval(counter);
+      } else {
+        el.textContent = Math.floor(current).toLocaleString() + '+';
+      }
+    }, interval);
+  }
+
+  function checkScroll() {
+    if (animated) return;
+    const rect = statSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 80) {
+      animated = true;
+      statElements.forEach((el, index) => animateNumber(el, targets[index]));
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  checkScroll();
+}
+
+initStats();
+</script>

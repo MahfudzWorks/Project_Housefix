@@ -54,3 +54,56 @@
     </div>
 
 </section>
+
+<script>
+function initRecentWorks() {
+  const section = document.querySelector('.recentWorks');
+  const tabs = document.querySelectorAll('.recentWorks .fw-bold');
+  const images = document.querySelectorAll('.recent-img');
+  let isAnimated = false;
+
+  images.forEach(img => {
+    img.style.opacity = '0';
+    img.style.transform = 'translateY(30px)';
+    img.style.transition = 'all 0.6s ease';
+  });
+
+  function checkScroll() {
+    if (isAnimated) return;
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop < window.innerHeight - 100) {
+      isAnimated = true;
+      images.forEach((img, index) => {
+        setTimeout(() => {
+          img.style.opacity = '1';
+          img.style.transform = 'translateY(0)';
+        }, index * 120);
+      });
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  checkScroll();
+
+  tabs.forEach(tab => {
+    tab.style.cursor = 'pointer';
+    tab.style.transition = 'color 0.2s ease';
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('text-primary'));
+      tab.classList.add('text-primary');
+    });
+  });
+
+  images.forEach(img => {
+    img.addEventListener('mouseover', () => {
+      img.style.transform = 'scale(1.05)';
+      img.style.boxShadow = '0 8px 20px rgba(0,0,0,0.12)';
+    });
+    img.addEventListener('mouseout', () => {
+      img.style.transform = 'scale(1)';
+      img.style.boxShadow = 'none';
+    });
+  });
+}
+initRecentWorks();
+</script>

@@ -9,10 +9,10 @@
                     Our plumbers are the most recognized professionals in the industry, delivering fast, reliable, and affordable solutions for all your plumbing needs.
                 </p>
                 <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-                    <button class="btn btn-primary px-4 py-2">
+                    <button id="btnEstimate" class="btn btn-primary px-4 py-2">
                         Request a Job Estimate
                     </button>
-                    <button class="btn btn-outline-primary px-4 py-2">
+                    <button id="btnPricing" class="btn btn-outline-primary px-4 py-2">
                         Pricing Plans
                     </button>
                 </div>
@@ -26,3 +26,41 @@
         </div>
     </div>
 </section>
+
+<script>
+function initHero() {
+    const btnEstimate = document.getElementById('btnEstimate');
+    const btnPricing = document.getElementById('btnPricing');
+
+    if (!btnEstimate || !btnPricing) return;
+
+    btnEstimate.addEventListener('click', function() {
+        console.log('Tombol Request Estimate diklik');
+
+        document.querySelector('#pricing-container, #form-container')?.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    btnPricing.addEventListener('click', function() {
+        console.log('Tombol Pricing diklik');
+        document.getElementById('pricing-container')?.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        heroSection.style.opacity = '0';
+        heroSection.style.transform = 'translateY(20px)';
+        heroSection.style.transition = 'all 0.6s ease-out';
+
+        setTimeout(() => {
+            heroSection.style.opacity = '1';
+            heroSection.style.transform = 'translateY(0)';
+        }, 100);
+    }
+}
+
+initHero();
+</script>

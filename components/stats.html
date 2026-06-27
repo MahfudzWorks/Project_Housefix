@@ -81,3 +81,44 @@
     </div>
 
 </section>
+
+<script>
+function initStats() {
+  const statNumbers = document.querySelectorAll('.stat-card h3');
+  const section = document.querySelector('.stats');
+  let started = false;
+
+  function animateCount(el, target) {
+    let current = 0;
+    const duration = 2000;
+    const stepTime = 20;
+    const steps = duration / stepTime;
+    const increment = target / steps;
+    const hasPlus = el.textContent.includes('+');
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        el.textContent = target + (hasPlus ? '+' : '');
+        clearInterval(timer);
+      } else {
+        el.textContent = Math.floor(current) + (hasPlus ? '+' : '');
+      }
+    }, stepTime);
+  }
+
+  function startAnimation() {
+    if (started) return;
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      started = true;
+      const values = [1200, 8714, 1600, 500];
+      statNumbers.forEach((el, i) => animateCount(el, values[i]));
+    }
+  }
+
+  window.addEventListener('scroll', startAnimation);
+  startAnimation();
+}
+initStats();
+</script>

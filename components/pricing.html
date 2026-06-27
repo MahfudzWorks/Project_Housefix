@@ -157,7 +157,6 @@
     </div>
 </section>
 
-<!-- Tambahkan CSS ini agar lebih rapi di HP -->
 <style>
 @media (max-width: 767px) {
     .small-md {
@@ -169,3 +168,50 @@
     }
 }
 </style>
+
+<script>
+function initPricing() {
+  const toggleBtn = document.querySelector('.toggleBtn');
+  const toggleCircle = document.querySelector('.toggleCircle');
+  const priceCards = document.querySelectorAll('.priceCard');
+  let isAnnual = false;
+
+  if (!toggleBtn || !toggleCircle) return;
+
+  toggleBtn.addEventListener('click', () => {
+    isAnnual = !isAnnual;
+    toggleCircle.style.transform = isAnnual ? 'translateX(24px)' : 'translateX(0)';
+
+    priceCards.forEach(card => {
+      const priceEl = card.querySelector('h1');
+      if (!priceEl) return;
+
+      if (isAnnual) {
+        if (priceEl.textContent.includes('199')) {
+          priceEl.innerHTML = '$159<span class="fs-6 text-secondary">/Year</span>';
+        } else if (priceEl.textContent.includes('499')) {
+          priceEl.innerHTML = '$399<span class="fs-6 text-secondary">/Year</span>';
+        } else if (priceEl.textContent.includes('399')) {
+          priceEl.innerHTML = '$319<span class="fs-6 text-secondary">/Year</span>';
+        }
+      } else {
+        if (priceEl.textContent.includes('159')) {
+          priceEl.innerHTML = '$199<span class="fs-6 text-secondary">/Month</span>';
+        } else if (priceEl.textContent.includes('399') && !priceEl.textContent.includes('159')) {
+          priceEl.innerHTML = '$499<span class="fs-6 text-secondary">/Month</span>';
+        } else if (priceEl.textContent.includes('319')) {
+          priceEl.innerHTML = '$399<span class="fs-6 text-secondary">/Month</span>';
+        }
+      }
+    });
+  });
+
+  document.querySelectorAll('.priceCard .btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelector('#hero-container')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+}
+
+initPricing();
+</script>

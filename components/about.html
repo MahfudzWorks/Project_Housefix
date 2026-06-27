@@ -54,3 +54,37 @@
     </div>
 
 </section>
+
+<script>
+function initAboutUs() {
+  const aboutImg = document.querySelector('.about-img');
+  const checkItems = document.querySelectorAll('.aboutUs .d-flex > img');
+  const btnMore = document.querySelector('.aboutUs .btn');
+
+  if (aboutImg) {
+    aboutImg.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease';
+    aboutImg.addEventListener('mouseover', () => {
+      aboutImg.style.transform = 'scale(1.03)';
+      aboutImg.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+    });
+    aboutImg.addEventListener('mouseout', () =>
+      {
+        aboutImg.style.transform = 'scale(1)';
+        aboutImg.style.boxShadow = '0 0.5rem 1rem rgba(0,0,0,0.15)';
+      });
+  }
+
+  checkItems.forEach(img => {
+    img.style.transition = 'transform 0.2s ease';
+    img.addEventListener('mouseover', () => img.style.transform = 'scale(1.15)');
+    img.addEventListener('mouseout', () => img.style.transform = 'scale(1)');
+  });
+
+  if (btnMore) {
+    btnMore.addEventListener('click', () => {
+      document.querySelector('#about-container')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+}
+initAboutUs();
+</script>

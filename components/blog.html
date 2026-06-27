@@ -56,3 +56,55 @@
         </div>
     </div>
 </section>
+
+<script>
+function initBlog() {
+  const blogSection = document.querySelector('.blog');
+  const cards = document.querySelectorAll('.blog .card');
+  const seeMoreBtn = document.querySelector('.blog .btn');
+  let isAnimated = false;
+
+  cards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'all 0.6s ease';
+  });
+
+  function checkScroll() {
+    if (isAnimated) return;
+    const sectionPos = blogSection.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (sectionPos < screenHeight - 100) {
+      isAnimated = true;
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 120);
+      });
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  checkScroll();
+
+  cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+      card.style.transform = 'translateY(-8px)';
+      card.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15) !important';
+    });
+    card.addEventListener('mouseout', () => {
+      card.style.transform = 'translateY(0)';
+      card.style.boxShadow = '0 0.125rem 0.25rem rgba(0,0,0,0.075) !important';
+    });
+  });
+
+  if (seeMoreBtn) {
+    seeMoreBtn.addEventListener('click', () => {
+      console.log('Lihat lebih banyak artikel blog');
+    });
+  }
+}
+initBlog();
+</script>

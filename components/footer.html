@@ -93,7 +93,9 @@
             <div class="col-lg-8">
 
                 <p class="mb-3 mb-lg-0">
-                    © Copyright 2025 by HouseFix. Designed & Developed by Hexwaave. Powered by Webflow
+                    <p class="mb-3 mb-lg-0">
+                        © Copyright 2026 by HouseFix Developed by Mahfudz Alfanani Syaviqi'.
+                    </p>
                 </p>
 
             </div>
@@ -119,3 +121,44 @@
     </div>
 
 </footer>
+
+<script>
+function initFooter() {
+  const links = document.querySelectorAll('footer a');
+  const contactBtn = document.querySelector('footer .btn-danger');
+  const subscribeBtn = document.querySelector('footer .btn-primary');
+  const emailInput = document.querySelector('footer input[type="email"]');
+  const socialIcons = document.querySelectorAll('footer .d-flex > a');
+
+  links.forEach(link => {
+    link.style.transition = 'color 0.2s ease';
+    link.addEventListener('mouseover', () => link.style.color = '#0d6efd');
+    link.addEventListener('mouseout', () => link.style.color = '#fff');
+  });
+
+  socialIcons.forEach(icon => {
+    icon.style.transition = 'transform 0.2s ease';
+    icon.addEventListener('mouseover', () => icon.style.transform = 'scale(1.15)');
+    icon.addEventListener('mouseout', () => icon.style.transform = 'scale(1)');
+  });
+
+  if (contactBtn) {
+    contactBtn.addEventListener('click', () => {
+      document.querySelector('#hero-container')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  if (subscribeBtn && emailInput) {
+    subscribeBtn.addEventListener('click', () => {
+      const email = emailInput.value.trim();
+      if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Terima kasih telah berlangganan!');
+        emailInput.value = '';
+      } else {
+        alert('Silakan masukkan alamat email yang valid.');
+      }
+    });
+  }
+}
+initFooter();
+</script>

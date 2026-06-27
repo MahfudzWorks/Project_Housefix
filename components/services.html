@@ -183,3 +183,48 @@
     </div>
 
 </section>
+
+<script>
+function initServices() {
+  const serviceSection = document.querySelector('.services');
+  const serviceItems = document.querySelectorAll('.service-item');
+  let isAnimated = false;
+
+  serviceItems.forEach(item => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px)';
+    item.style.transition = 'all 0.6s ease';
+  });
+
+  function checkScroll() {
+    if (isAnimated) return;
+    const sectionPos = serviceSection.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (sectionPos < screenHeight - 100) {
+      isAnimated = true;
+      serviceItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, index * 120);
+      });
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  checkScroll();
+
+  serviceItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+      item.style.transform = 'translateY(-8px)';
+      item.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+    });
+    item.addEventListener('mouseout', () => {
+      item.style.transform = 'translateY(0)';
+      item.style.boxShadow = 'none';
+    });
+  });
+}
+initServices();
+</script>

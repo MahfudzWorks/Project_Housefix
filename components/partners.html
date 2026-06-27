@@ -53,3 +53,22 @@
     </div>
 
 </section>
+
+<script>
+function initPartners() {
+  const logos = document.querySelectorAll('.partner-logo');
+  logos.forEach(logo => {
+    logo.style.opacity = '0.7';
+    logo.style.transition = 'all 0.3s ease';
+    logo.addEventListener('mouseover', () => {
+      logo.style.opacity = '1';
+      logo.style.transform = 'scale(1.08)';
+    });
+    logo.addEventListener('mouseout', () => {
+      logo.style.opacity = '0.7';
+      logo.style.transform = 'scale(1)';
+    });
+  });
+}
+initPartners();
+</script>
